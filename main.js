@@ -27,12 +27,12 @@ document.addEventListener('DOMContentLoaded',function(){
             playBtn.innerText = 'continue';
             game = new Game(ctx);
             game.start(ctx,cols,rows,blockSize,gameCanvas);
-            gameStatus = game.play(SCREEN_WIDTH, SCREEN_HEIGTH);
+            game.play(SCREEN_WIDTH, SCREEN_HEIGTH);
         }else{
             //continue game
             gameStatus = 'play';
             menuSelector.classList.toggle('open');
-            gameStatus = game.play(SCREEN_WIDTH, SCREEN_HEIGTH);
+            game.play(SCREEN_WIDTH, SCREEN_HEIGTH);
         }
         console.log(gameStatus);
     });
@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded',function(){
                 //pause game
                 gameStatus = 'pause';
                 game.pause();
+                console.log('ok_____________');
             }else if(gameStatus == 'pause'){
                 //continue game
                 gameStatus = 'play';
