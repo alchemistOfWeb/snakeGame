@@ -26,11 +26,13 @@ document.addEventListener('DOMContentLoaded',function(){
             menuSelector.classList.toggle('open');
             playBtn.innerText = 'continue';
             game = new Game(ctx);
+            game.status = 'play';
             game.start(ctx,cols,rows,blockSize,gameCanvas);
             game.play(SCREEN_WIDTH, SCREEN_HEIGTH);
         }else{
             //continue game
             gameStatus = 'play';
+            game.status = 'play';
             menuSelector.classList.toggle('open');
             game.play(SCREEN_WIDTH, SCREEN_HEIGTH);
         }
@@ -40,21 +42,22 @@ document.addEventListener('DOMContentLoaded',function(){
         console.log(e.keyCode);
         if(e.keyCode == 27 && gameStatus != 'waiting'){
             menuSelector.classList.toggle('open');
-            if(gameStatus == 'play'){
+            if(game.status == 'play'){
                 //pause game
-                gameStatus = 'pause';
+                game.status = 'pause';
                 game.pause();
-                console.log('ok_____________');
-            }else if(gameStatus == 'pause'){
+            }else if(game.status == 'pause'){
                 //continue game
-                gameStatus = 'play';
+                game.status = 'play';
                 game.play(SCREEN_WIDTH, SCREEN_HEIGTH);
             }else if(game.status == 'lost'){
                 //menu game
                 document.querySelector('.lost').classList.remove('open');
                 gameStatus = 'waiting';
-                game.status = '';
+                game.status = 'waiting';
                 playBtn.innerText = 'play again';
+                console.log('ok_____________');
+
             }
             console.log(gameStatus);
         }

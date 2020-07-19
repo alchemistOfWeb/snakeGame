@@ -25,6 +25,7 @@ function Game(ctx){
                 document.querySelector('.lost-score').innerText = 'your score: '+result;
                 document.querySelector('.lost').classList.add('open');
                 this.status = 'lost';
+                console.log(this.status);
             }
         },75);
         window.addEventListener('keydown', ((evt) => {
