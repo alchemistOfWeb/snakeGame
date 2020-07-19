@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>snakeGame</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="fruit.js"></script>
+    <script src="snake.js"></script>
+    <script src="play.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="game-wrapper">
+        <canvas class="canvas" id="game-canvas"></canvas>
+        <div class="score">0</div>
+        <div class="lost">
+            <div class="lost-text">You lost</div>
+            <div class="lost-score">your score: 0</div>
+            <div class="lost-help-text">Нажмите Esc</div>
+        </div>
+        <div class="game-menu open" id="main-menu">
+            
+            <ul class="game-menu-items-container">
+                <li class="game-menu-item">
+                    <div class="game-menu-btn" id="play-game">play</div>
+                </li>
+                <li class="game-menu-item">
+                    <div class="game-menu-btn" id="settings">settings</div>
+                </li>
+                <li class="game-menu-item">
+                    <div class="game-menu-btn" id="records">records</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

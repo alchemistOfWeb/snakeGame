@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+}
+.game-wrapper{
+    position: relative;
+    height: 100%;
+}
+.canvas{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border: 15px black solid;
+    background-color: aqua;
+}
+.score{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 20px;
+    color: rgb(155, 133, 37);
+}
+.lost{
+    position: absolute;
+    top: 200px;
+    left: 0; 
+    right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+}
+.lost.open{
+    opacity: 1;
+    visibility: visible;
+}
+.lost-text{
+    color: rgb(211, 165, 40);
+    font-size: 100px;
+    text-shadow: 0 0 2px black;
+}
+.lost-score{
+    color: rgb(114, 92, 32);
+    font-size: 50px;
+    text-shadow: 0 0 1px rgb(31, 28, 28);
+}
+.lost-help-text{
+    color: rgb(114, 92, 32);
+    padding-top: 200px;
+    font-size: 20px;
+    text-shadow: 0 0 1px rgb(31, 28, 28);
+    
+}
+.game-menu{
+    background: radial-gradient(50% 50%, rgb(235, 25, 25), rgba(16, 177, 16, 0.726));
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+}
+.game-menu.open{
+    visibility: visible;
+    opacity: 1;
+}
+.game-menu-items-container{
+    margin: auto;
+    position: relative;
+}
+.game-menu-items-container:before{
+    
+    content: 'snakeGame';
+    color: yellow;
+    text-shadow: 0 0 1px black;
+    font-size: 100px;
+
+}
+.game-menu-item{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.game-menu-btn{
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+}
+.game-menu-btn:hover{
+    color: rgb(202, 195, 195);
+}
