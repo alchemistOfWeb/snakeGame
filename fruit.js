@@ -8,9 +8,7 @@ function Fruit(ctx,cols,rows,blockSize){
     }
 
     this.draw = function(){
-        ctx.fillStyle = 'red';
+        ctx.fillStyle = '#e94c1a';
         ctx.fillRect(this.x, this.y, blockSize, blockSize);
-        
-        console.log('draw');
     }
 }
